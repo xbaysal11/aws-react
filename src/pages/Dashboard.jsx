@@ -227,7 +227,7 @@ export default function Dashboard() {
       >
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
           <div>
-            <Typography.Text>Description</Typography.Text>
+            <Typography.Text>Description!</Typography.Text>
             <Input
               value={form.description}
               name="description"
