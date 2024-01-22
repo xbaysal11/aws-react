@@ -137,9 +137,6 @@ export default function Dashboard() {
     customRequest: dummyRequest,
     required: true,
     onChange(info) {
-      // if (info.file.status !== 'uploading') {
-      //   notification.info({ message: `${info.file.name} file uploading..!` })
-      // }
       if (info.file.status === 'done') {
         setForm({ ...form, file: info.file })
       } else if (info.file.status === 'error') {
@@ -170,7 +167,14 @@ export default function Dashboard() {
           Upload image
         </Button>
       </div>
-      <div style={{ display: 'flex', gap: '20px', marginTop: '50px', alignItems:"flex-end" }}>
+      <div
+        style={{
+          display: 'flex',
+          gap: '20px',
+          marginTop: '50px',
+          alignItems: 'flex-end',
+        }}
+      >
         {data?.map((i) => (
           <div key={i.fileid}>
             <Image width={350} src={i.link} />
